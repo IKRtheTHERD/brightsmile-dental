@@ -1,12 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import '@fontsource/geist-sans/400.css';
+@import '@fontsource/geist-sans/500.css';
+@import '@fontsource/geist-sans/600.css';
+@import '@fontsource/geist-sans/700.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-size: 115%;
+  }
+  
   body {
-    @apply font-sans bg-sage-50 text-gray-800 antialiased selection:bg-sage-200;
+    @apply font-sans bg-zinc-50 text-zinc-900 antialiased selection:bg-emerald-200 selection:text-emerald-950;
   }
 }
 

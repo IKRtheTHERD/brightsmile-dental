@@ -7,21 +7,35 @@ export default {
   theme: {
     extend: {
       colors: {
-        sage: {
-          50: '#f4f7f4',
-          100: '#e4ebe4',
-          200: '#cbd8cb',
-          300: '#a7bea7',
-          400: '#7d9e7d',
-          500: '#5e825e',
-          600: '#486648',
-          700: '#3c523c',
-          800: '#324232',
-          900: '#2a372a',
+        emerald: {
+          50: '#f2fbf5',
+          100: '#e1f7e8',
+          200: '#c3ecd2',
+          300: '#95dbb2',
+          400: '#5fc18a',
+          500: '#38a56b',
+          600: '#278553',
+          700: '#216943',
+          800: '#1d5437',
+          900: '#19452f',
+          950: '#0e271b',
+        },
+        zinc: {
+          50: '#fafafa',
+          100: '#f4f4f5',
+          200: '#e4e4e7',
+          300: '#d4d4d8',
+          400: '#a1a1aa',
+          500: '#71717a',
+          600: '#52525b',
+          700: '#3f3f46',
+          800: '#27272a',
+          900: '#18181b',
+          950: '#09090b',
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Geist', 'system-ui', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.4s ease-out forwards',
