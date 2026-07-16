@@ -82,7 +82,7 @@ function WizardContent({
           </h2>
           <p className={`text-sage-600 mb-5 ${desktop ? 'text-sm' : 'text-lg'}`}>Select a date and time that works.</p>
 
-          <div className={`bg-white rounded-2xl border border-sage-100 shadow-sm mb-5 ${desktop ? 'p-4' : 'p-5'}`}>
+          <div className={`bg-white rounded-2xl border border-sage-100 shadow-sm mb-5 ${desktop ? 'p-3 max-w-[300px]' : 'p-5 max-w-sm'}`}>
             <div className="flex items-center justify-between mb-3">
               <button
                 onClick={() => setCurrentMonth(subMonths(currentMonth, 1))}
@@ -365,16 +365,16 @@ export default function App() {
         </div>
 
         {/* Desktop */}
-        <div className="hidden lg:flex w-full max-w-5xl bg-white rounded-3xl shadow-2xl shadow-sage-200/50 overflow-hidden min-h-[480px]">
-          <div className="w-2/5 bg-gradient-to-br from-sage-600 to-sage-800 p-12 flex flex-col justify-center text-white">
-            <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6 animate-pop-in">
-              <CheckCircle className="w-9 h-9 text-white" />
+        <div className="hidden lg:flex w-full max-w-4xl bg-white rounded-3xl shadow-2xl shadow-sage-200/50 overflow-hidden min-h-[420px]">
+          <div className="w-2/5 bg-gradient-to-br from-sage-600 to-sage-800 p-10 flex flex-col justify-center text-white">
+            <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mb-5 animate-pop-in">
+              <CheckCircle className="w-8 h-8 text-white" />
             </div>
-            <h1 className="text-3xl font-bold mb-3">You're all set!</h1>
-            <p className="text-sage-200 text-lg leading-relaxed">Your appointment has been confirmed with BrightSmile Dental.</p>
+            <h1 className="text-2xl font-bold mb-2">You're all set!</h1>
+            <p className="text-sage-200 text-base leading-relaxed">Your appointment has been confirmed with BrightSmile Dental.</p>
           </div>
-          <div className="flex-1 p-12 flex flex-col justify-center">
-            <h2 className="text-xl font-semibold text-gray-800 mb-6">Appointment Summary</h2>
+          <div className="flex-1 p-10 flex flex-col justify-center">
+            <h2 className="text-lg font-semibold text-gray-800 mb-5">Appointment Summary</h2>
             <div className="space-y-4 mb-8">
               {[
                 { Icon: Sparkles,    label: 'Service',   value: selectedServiceObj?.title, sub: 'with Dr. Amir Haddad' },
@@ -444,7 +444,7 @@ export default function App() {
       <div className="hidden lg:flex h-screen w-screen overflow-hidden bg-gray-50">
 
         {/* ── LEFT PANEL: brand / info / step nav ── */}
-        <aside className="w-[340px] xl:w-[400px] flex-shrink-0 bg-gradient-to-br from-sage-700 to-sage-900 text-white flex flex-col justify-between p-10 overflow-hidden relative">
+        <aside className="w-[280px] xl:w-[340px] flex-shrink-0 bg-gradient-to-br from-sage-700 to-sage-900 text-white flex flex-col justify-between p-8 overflow-hidden relative">
           {/* subtle decorative circles */}
           <div className="absolute -top-20 -left-20 w-64 h-64 bg-white/5 rounded-full" />
           <div className="absolute -bottom-16 -right-10 w-72 h-72 bg-white/5 rounded-full" />
@@ -509,7 +509,7 @@ export default function App() {
         <main className="flex-1 flex flex-col h-screen overflow-hidden">
 
           {/* Top bar */}
-          <header className="flex-shrink-0 flex items-center justify-between px-10 py-5 bg-white border-b border-gray-100 shadow-sm">
+          <header className="flex-shrink-0 flex items-center justify-between px-8 py-4 bg-white border-b border-gray-100 shadow-sm">
             <div className="flex items-center gap-3">
               {step > 1 && (
                 <button onClick={prevStep} className="w-9 h-9 rounded-xl flex items-center justify-center hover:bg-sage-50 transition-colors text-sage-600 border border-sage-100" aria-label="Back">
@@ -537,8 +537,8 @@ export default function App() {
           </header>
 
           {/* Scrollable content */}
-          <div className="flex-1 overflow-y-auto px-10 xl:px-16 py-8">
-            <div className="max-w-2xl mx-auto">
+          <div className="flex-1 overflow-y-auto px-8 xl:px-12 py-8">
+            <div className="max-w-xl mx-auto">
               <WizardContent {...sharedProps} desktop={true} />
             </div>
           </div>
