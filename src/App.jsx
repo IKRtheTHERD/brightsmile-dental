@@ -112,7 +112,7 @@ function WizardContent({
                     key={date.toString()}
                     disabled={isPast}
                     onClick={() => { setSelectedDate(date); setSelectedTime(null); }}
-                    className={`aspect-square rounded-full flex items-center justify-center text-xs font-medium transition-all
+                    className={`w-8 h-8 sm:w-9 sm:h-9 mx-auto rounded-full flex items-center justify-center text-xs font-medium transition-all
                       ${isPast ? 'text-gray-300 cursor-not-allowed' : 'hover:bg-sage-100 text-gray-700'}
                       ${isSel  ? 'bg-sage-500 text-white hover:bg-sage-600 shadow-md' : ''}
                       ${isTod && !isSel ? 'border-2 border-sage-200 text-sage-700' : ''}`}
